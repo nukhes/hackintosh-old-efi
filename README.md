@@ -11,3 +11,4 @@ RAM: 16.00 GB
 
 A SMBios é de um iMac1,1
 ```
+csr-active-config está DESABILITADO para usar o VirtualBox 6.1.40 (último que roda em AMD), habilite ele para fazer updates no SO.
