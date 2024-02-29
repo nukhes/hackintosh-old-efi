@@ -2,7 +2,7 @@
 
 Esta é a EFI do meu Ryzentosh.
 
-Configuração da máquina:
+[⚙️] Configuração da máquina:
 ```
 Sistema: macOS Sonoma Versão 14.3.1 (Compilação 23D60)
 CPU: AMD Ryzen 5 1600
