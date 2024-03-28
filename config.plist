@@ -186,6 +186,58 @@
 			<false/>
 		</dict>
 	</dict>
+	<key>Booter</key>
+	<dict>
+		<key>MmioWhitelist</key>
+		<array/>
+		<key>Patch</key>
+		<array/>
+		<key>Quirks</key>
+		<dict>
+			<key>AllowRelocationBlock</key>
+			<false/>
+			<key>AvoidRuntimeDefrag</key>
+			<true/>
+			<key>DevirtualiseMmio</key>
+			<false/>
+			<key>DisableSingleUser</key>
+			<false/>
+			<key>DisableVariableWrite</key>
+			<false/>
+			<key>DiscardHibernateMap</key>
+			<false/>
+			<key>EnableSafeModeSlide</key>
+			<true/>
+			<key>EnableWriteUnprotector</key>
+			<false/>
+			<key>FixupAppleEfiImages</key>
+			<false/>
+			<key>ForceBooterSignature</key>
+			<false/>
+			<key>ForceExitBootServices</key>
+			<false/>
+			<key>ProtectMemoryRegions</key>
+			<false/>
+			<key>ProtectSecureBoot</key>
+			<false/>
+			<key>ProtectUefiServices</key>
+			<false/>
+			<key>ProvideCustomSlide</key>
+			<true/>
+			<key>ProvideMaxSlide</key>
+			<integer>0</integer>
+			<key>RebuildAppleMemoryMap</key>
+			<true/>
+			<key>ResizeAppleGpuBars</key>
+			<integer>-1</integer>
+			<key>SetupVirtualMap</key>
+			<true/>
+			<key>SignalAppleOS</key>
+			<false/>
+			<key>SyncRuntimePermissions</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>DeviceProperties</key>
 	<dict>
 		<key>Add</key>
@@ -197,6 +249,8 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x3,0x1)/Pci(0x0,0x0)</key>
 			<dict>
+				<key>PP_PhmSoftPowerPlayTable</key>
+				<data>QQMHAQBNAJUGAABvKAAAGQAAAAAABgFADQMA6G4DADIAGQBNAKECmAIAALUBOwF3APkA3gEGAwAA0QIAACADOgOY/AEAUwcAAAAAAAABAgAAAAAAAAAACAAAAAAAAAAAAAAABwACAAAAAAAFAAAAAAAAAAAAAAAAEO4CAAAAAAAAAv8AAAAAAAAD/wAAAAAAAAT/AAAAAAAABf8AAAAAAAAG/wAAAAAAAAf/AAAAAAAACP8AAAAAAAAgAwAAAAAAAFIDAAAAAAAAhAMAAAAAAAC2AwAAAAAAAOgDAAAAAAAAGgQAAAAAAABMBAAAAAAAAH4EAAAAAAAAAAiEAwAAAAAAAAL/AAAAAAAAA/8AAAAAAAAE/wAAAAAAAAX/AAAAAAAABv8AAAAAAAAH/wAAAAAAAAj/AAAAAAAAAQgAAAAwdQAAAAAAgAAAAAAB5v+w5QAAAAAAAAAAAAAC5v/gcwEAAAAAAAAAAAAD5v9QpAEAAAAAAAAAAAAE5v98vgEAAAAAAAAAAAAF5v/g1wEAAAAAAAAAAAAG5v/g1wEAAAAAAAAAAAAHAADg1wEAAAAAAAAAAAAAAwCEAwAA6AMwdQAAAAAIhAMAAOgDoIYBAAAACoQDAADoA5irAgAAAAAICAAAkOIAAPgkAQAY9gAAAAAAAKjeAAAJtP8Y9gAAgDgBAIgNAQAAAAAAAPoAAAqb/6AJAQAITAEA+CQBAAAAAABwEQEAC4L/KB0BAKhbAQBoPAEAAAAAAOAoAQAMaf/ILAEAYGcBAPBPAQAAAAAAaDwBAA03/4A4AQAYcwEAeGMBAAAAAAAITAEADgX/OEQBANB+AQAAdwEAAAAAAMBXAQAPAADwTwEAoIYBAKCGAQAAAAAAeGMBAAEXAAACACYAAAkDoA9kGTQh0AeIE3AXlCoAZADkEpgIeGMBAEsjZABkAGQAZABkAGQAZAABMjwAAAR4AAAAcAB9AH0AAAAAAH0AWgAAAAAAXgACAGkAUABQAHMAcwBfAAAAkBCWAJAAAAYAAAAAAQYAAAECAAEBAgACAQIAAgECAAIBAgACAQIBAwAQAAAAAAAAABAAAAAAAAACEAAAAAAAAAABAAAAAAA=</data>
 				<key>shikigva</key>
 				<integer>80</integer>
 			</dict>
@@ -237,24 +291,6 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/Lilu</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>RadeonSensor.kext</string>
-				<key>Comment</key>
-				<string>RadeonSensor.kext</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/RadeonSensor</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -345,42 +381,6 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/AppleALC</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>AppleALCU.kext</string>
-				<key>Comment</key>
-				<string>AppleALCU.kext</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/AppleALCU</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>SMCRadeonGPU.kext</string>
-				<key>Comment</key>
-				<string>SMCRadeonGPU.kext</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/SMCRadeonGPU</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -1283,67 +1283,17 @@
 		<dict>
 			<key>4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
 			<dict>
+				<key>revpatch</key>
+				<string>AMD Ryzen 5 1600</string>
 				<key>revcpu</key>
 				<integer>1</integer>
-				<key>Booter</key>
-				<dict>
-					<key>MmioWhitelist</key>
-					<array/>
-					<key>Patch</key>
-					<array/>
-					<key>Quirks</key>
-					<dict>
-						<key>AllowRelocationBlock</key>
-						<false/>
-						<key>AvoidRuntimeDefrag</key>
-						<true/>
-						<key>DevirtualiseMmio</key>
-						<false/>
-						<key>DisableSingleUser</key>
-						<false/>
-						<key>DisableVariableWrite</key>
-						<false/>
-						<key>DiscardHibernateMap</key>
-						<false/>
-						<key>EnableSafeModeSlide</key>
-						<true/>
-						<key>EnableWriteUnprotector</key>
-						<false/>
-						<key>FixupAppleEfiImages</key>
-						<false/>
-						<key>ForceBooterSignature</key>
-						<false/>
-						<key>ForceExitBootServices</key>
-						<false/>
-						<key>ProtectMemoryRegions</key>
-						<false/>
-						<key>ProtectSecureBoot</key>
-						<false/>
-						<key>ProtectUefiServices</key>
-						<false/>
-						<key>ProvideCustomSlide</key>
-						<true/>
-						<key>ProvideMaxSlide</key>
-						<integer>0</integer>
-						<key>RebuildAppleMemoryMap</key>
-						<true/>
-						<key>ResizeAppleGpuBars</key>
-						<integer>-1</integer>
-						<key>SetupVirtualMap</key>
-						<true/>
-						<key>SignalAppleOS</key>
-						<false/>
-						<key>SyncRuntimePermissions</key>
-						<true/>
-					</dict>
-				</dict>
 				<key>revcpuname</key>
 				<string>AMD Ryzen 5 1600</string>
 			</dict>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>npci=0x2000 unfairgva=6 alcid=13 -v debug=0x100 keepsyms=1 alcverbs=1 -no_compat_check revpatch=sbvm ipc_control_port_options=0
+				<string>npci=0x2000 unfairgva=6 alcid=13 debug=0x100 keepsyms=1 alcverbs=1 -no_compat_check revpatch=sbvmm ipc_control_port_options=0
 </string>
 				<key>csr-active-config</key>
 				<data>AwAAAA==</data>
